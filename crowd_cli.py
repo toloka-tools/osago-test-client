@@ -106,13 +106,13 @@ def main(dir: str, doc_type: str, force: bool):
     fields = []
     print('uploading files')
     documents = []
-    for doc in p.iterdir():
-        if doc.is_dir():
-            documents.append({
-                'url': str(doc),
-                'type': doc_type,
-                'fields': fields_from_dir(doc)
-            })
+    # for doc in p.iterdir():
+    #     if doc.is_dir():
+    #         documents.append({
+    #             'url': str(doc),
+    #             'type': doc_type,
+    #             'fields': fields_from_dir(doc)
+    #         })
     if not documents:
         fields = fields_from_dir(p)
         documents.append({
